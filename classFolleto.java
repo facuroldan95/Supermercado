@@ -75,9 +75,11 @@ public class classFolleto {
     public double totalRecaudacionPorArticulo(int codigo){
         double total = 0;
         for (int i = 0; i < producto.length; i++) {
-            if (producto[i] != null && producto[i].getCodigo() == codigo) {
-                double precioConDescuento = (producto[i].getPrecioRegular() * porc) / 100.0;
-                total = (producto[i].getPrecioRegular() - precioConDescuento) * producto[i].getStock();
+            if (producto[i] != null && producto[i].getCodigo() == codigo) {                
+                double descuento = (producto[i].getPrecioRegular() * porc) / 100.0;
+                double precioOferta = producto[i].getPrecioRegular() - descuento;
+                total = (producto[i].getPrecioRegular() - descuento) * producto[i].getStock();
+                System.out.println(producto[i].toString() + ", Oferta: "+ precioOferta);
             }
         }
         return total;

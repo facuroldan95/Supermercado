@@ -41,22 +41,30 @@ public class TipoParcialSuper {
         
         System.out.println("Cantidad de Articulos S/ cantidad de días...");
         Folleto.OfertasSegunDias(cant);
+        
         System.out.println("/////////////////////////////////////////");
         System.out.println("Sumatoria total de Stock");
+        
         System.out.println(Folleto.sumatoriaStock());
         System.out.println("/////////////////////////////////////////");
+        
         System.out.println("Cantidad de articulos con descuentos superior a $20");
         Folleto.articulosSegunDescuento(20);
+        
         System.out.println("/////////////////////////////////////////");
         System.out.println("Sumatoria de Stock segun Codigo");
         System.out.println("Ingrese el codigo para calcular las ganancias...");
         int cod = lector.nextInt();
-        while(cod == 0){
+        while(cod != 0){
+
+            System.out.println("Las ganancias segun la cantidad de stock y precio oferta del codigo :"+cod);
+            System.out.println(Folleto.totalRecaudacionPorArticulo(cod));
             System.out.println("Ingrese nuevamente otro codigo... Ingrese (0) para terminar...");
             cod = lector.nextInt();
         }
-        System.out.println("Las ganancias segun la cantidad de stock y precio oferta del codigo :"+cod);
-        System.out.println(Folleto.totalRecaudacionPorArticulo(cod));
+        
+        
+        
         System.out.println("/////////////////////////////////////////");
     }
     
