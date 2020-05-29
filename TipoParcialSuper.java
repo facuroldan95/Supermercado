@@ -40,7 +40,7 @@ public class TipoParcialSuper {
         }
         
         System.out.println("Cantidad de Articulos S/ cantidad de días...");
-        Folleto.OfertasSegunDias(cant);
+        Folleto.OfertasSegunDias(5);
         
         System.out.println("/////////////////////////////////////////");
         System.out.println("Sumatoria total de Stock");
